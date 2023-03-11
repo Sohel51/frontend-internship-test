@@ -83,8 +83,7 @@ a {
 
 .home .content h1 {
     font-family: 'RaleWayRegular';
-    animation: slideLeft .50s linear;
-    animation-delay: 2s;
+    animation: slideLeft .50s linear 2s, rightLeft .50s linear 17.5s;
     visibility: hidden;
     animation-fill-mode: forwards;
 }
@@ -101,10 +100,21 @@ a {
     }
 }
 
+@keyframes rightLeft {
+    0% {
+        transform: translateY(0);
+        visibility: visible;
+    }
+
+    100% {
+        transform: translateY(30px);
+        visibility: hidden;
+    }
+}
+
 .home .content h2 {
     font-family: RaleWaySemibold;
-    animation: slideLeft .50s linear;
-    animation-delay: 3s;
+    animation: slideLeft .50s linear 3s, rightLeft .50s linear 16.5s;
     visibility: hidden;
     animation-fill-mode: forwards;
 }
@@ -118,16 +128,14 @@ a {
     font-size: 20px;
     border: none;
     border-radius: 10px;
-    animation: slideLeft .50s linear;
-    animation-delay: 4s;
+    animation: slideLeft .50s linear 4s, rightLeft .50s linear 15.5s;
     visibility: hidden;
     animation-fill-mode: forwards;
 }
 
 .home .image {
     width: 50%;
-    animation: slideRight 1s linear;
-    animation-delay: .5s;
+    animation: slideRight 1s linear .5s, secondSlight 1s linear 18.5s;
     visibility: hidden;
     animation-fill-mode: forwards;
 }
@@ -141,6 +149,18 @@ a {
     100% {
         transform: translateX(0);
         visibility: visible;
+    }
+}
+
+@keyframes secondSlight {
+    0% {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    100% {
+        transform: translateX(200px);
+        visibility: hidden;
     }
 }
 
@@ -167,8 +187,7 @@ a {
     position: absolute;
     left: 50%;
     font-size: 36px;
-    animation: circleWide 10s linear infinite;
-    animation-delay: 5.3s;
+    animation: circleWide 10s linear 5.3s;
     visibility: hidden;
     transform-origin: 0 350px;
 }
